@@ -9,15 +9,15 @@ branding:
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: 'Your input description here'
+  token:
+    description: >
+      Access token for the GitHub API. Required to fetch the tags and commits in
+      order to calculate the version number
     required: true
-    default: '1000'
+    default: ${{ github.token }}
 
 # Define your outputs here.
-outputs:
-  time:
-    description: 'Your output description here'
+outputs: {}
 
 runs:
   using: node20
