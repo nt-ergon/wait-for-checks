@@ -29044,7 +29044,7 @@ async function run() {
                 inProgress.total_count === 0) {
                 break;
             }
-            if (new Date().getTime() - startTime.getTime() / 1000 / 60 > 10) {
+            if ((new Date().getTime() - startTime.getTime()) / 1000 / 60 > 10) {
                 // 10 min at most
                 throw new Error('timed out waiting for jobs to finish');
             }

@@ -40,7 +40,7 @@ export async function run(): Promise<void> {
       ) {
         break
       }
-      if (new Date().getTime() - startTime.getTime() / 1000 / 60 > 10) {
+      if ((new Date().getTime() - startTime.getTime()) / 1000 / 60 > 10) {
         // 10 min at most
         throw new Error('timed out waiting for jobs to finish')
       }
